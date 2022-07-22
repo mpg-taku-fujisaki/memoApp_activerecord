@@ -8,3 +8,4 @@ create table memos(
 insert into memos values('1st memo', 'Hello');
 insert into memos(title, content) values('2nd memo', 'Helloooooo World');
 
+ 
