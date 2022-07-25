@@ -1,7 +1,16 @@
 <h1>メモアプリ</h1>
 
 <ul>
-    <% @memos.each do |memos| %>
-        <li><%= memos.title %>: <%= memos.content %></li>
+    <% @memos.each do |memo| %>
+    <li>
+        <a href="/show/<%= memo['id']%>">
+          <%= memo['title']%>
+        </a>
+    </li>
     <% end %>
 </ul>
+
+
+<button type="button" onclick="location.href='/new'">
+    追加
+</button>

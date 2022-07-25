@@ -1,5 +1,18 @@
-<ul>
-    <% @memos.each do |memos| %>
-        <li><%= memos.title %>: <%= memos.content %></li>
-    <% end %>
-</ul>
+<h1>
+  <%= @memo['title']%> <br>
+</h1>
+<p>
+  <%= @memo['content']%>
+  <br><%= @memo['id']%>
+</p>
+
+
+
+<button type="button" onclick="location.href='/edit/<%= @memo['id']%>'">
+    変更
+</button>
+
+<button type="button">
+    削除
+</button>
+

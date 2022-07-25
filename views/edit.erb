@@ -1,0 +1,20 @@
+EDIT MEMO
+
+<h1>
+  <%= @memo['title']%> <br>
+</h1>
+<p>
+  <%= @memo['content']%>
+</p>
+
+
+
+
+<form method="post" action="/edit">
+	<input type="title" name="title" class="memo-title border" value="<%= @memo['title'] %>">
+	<textarea name="content" class="memo-body border"><%= @memo['content'] %></textarea>
+    <input id="hidden" type="hidden" name="_method" value="patch">
+	<button type="submit">更新</button>
+</form>
+
+
